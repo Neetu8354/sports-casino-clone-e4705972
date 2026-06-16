@@ -1,0 +1,22 @@
+# Betfair
+
+> India's premier cricket exchange — live back and lay odds, in-play markets, ball-by-ball price movement and a 200K-strong trading community. Built for cricket traders who read the market before the commentator does.
+
+## Pages
+
+- [Home](/): Live cricket odds, in-play markets, match pulse and price movement across IPL and international cricket.
+- [Exchange](/exchange): Live cricket exchange with back/lay prices, matched volume and a stake calculator with real-time profit/loss.
+- [Blog](/blog): Cricket trading playbooks, exchange-market analysis, in-play strategy guides and IPL liquidity reports.
+
+## Blog
+
+- [IPL 2026 team power rankings](/blog/ipl-2026-team-power-rankings): Data-driven IPL 2026 power tiers — tied to outright market prices and projected liquidity.
+- [How to read cricket stats like an analyst](/blog/how-to-read-cricket-stats-like-an-analyst): The seven metrics that move cricket exchange odds, in plain English.
+- [Best live cricket score tools in 2026](/blog/live-cricket-scores-best-tools-2026): Benchmark of the fastest live-score sources — and why latency directly affects your exchange edge.
+- [Cricket prediction models explained](/blog/cricket-prediction-models-explained): How pre-match and in-play cricket models price markets — and where they break.
+- [Top 10 batters to watch in 2026](/blog/top-10-batters-to-watch-2026): The batters most likely to swing in-play match odds, ranked by underlying numbers.
+- [Top 10 bowlers — 2026 watchlist](/blog/top-10-bowlers-2026-watchlist): The bowlers whose first over collapses or props up the chasing price.
+- [Cricket glossary — 101 terms](/blog/cricket-glossary-101-terms): A plain-English glossary covering cricket, analytics and exchange-market terms.
+- [In-play exchange strategy guide](/blog/fan-predictions-strategy-guide): A five-step framework for reading cricket exchange markets ball by ball.
+- [Venues that favour chasing](/blog/venues-that-favour-chasing): The grounds where chasing odds shorten fastest — and how to price them pre-match.
+- [What makes a cricket trading community great](/blog/what-makes-a-cricket-community-great): How to spot a high-signal cricket trading community — and how the Betfair pavilion is built.
