@@ -35,7 +35,7 @@ export const PromoSlider = () => {
                   <div className="max-w-lg animate-fade-up">
                     <h3 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl">{s.title}</h3>
                     <p className="mt-3 text-foreground/80 md:text-lg">{s.subtitle}</p>
-                    <a href="#matches">
+                    <a href="/exchange">
                       <Button variant="hero" className="mt-6">{s.cta} →</Button>
                     </a>
                   </div>
