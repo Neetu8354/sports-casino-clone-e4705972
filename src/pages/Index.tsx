@@ -57,7 +57,6 @@ const Index = () => {
       />
       <Header />
       <main>
-        <h1 className="sr-only">Online Cricket Betting Exchange – Live Cricket Odds & Ball-by-Ball Markets</h1>
         <Hero />
         <PromoSlider />
         <div id="matches"><LiveMatches /></div>

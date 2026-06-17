@@ -13,7 +13,7 @@ type Props = {
   author?: string;
 };
 
-const SITE_URL = "https://betfair01.live";
+const SITE_URL = "https://www.betfair01.live";
 const DEFAULT_IMG = `${SITE_URL}/og-default.jpg`;
 
 const upsertMeta = (key: string, value: string, attr: "name" | "property" = "name") => {
