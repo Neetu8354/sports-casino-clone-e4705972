@@ -19,9 +19,9 @@ export const PromoSlider = () => {
   }, []);
 
   return (
-    <section className="container py-10">
-      <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-card-elevated">
-        <div className="relative aspect-[21/8] md:aspect-[24/7]">
+    <section className="container py-6 sm:py-10">
+      <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-border bg-card shadow-card-elevated">
+        <div className="relative aspect-[16/9] sm:aspect-[21/8] md:aspect-[24/7]">
           {slides.map((s, idx) => (
             <div
               key={idx}
@@ -31,12 +31,12 @@ export const PromoSlider = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               <div className="absolute inset-0 flex items-center">
-                <div className="container">
+                <div className="container px-4 sm:px-0">
                   <div className="max-w-lg animate-fade-up">
-                    <h3 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl">{s.title}</h3>
-                    <p className="mt-3 text-foreground/80 md:text-lg">{s.subtitle}</p>
+                    <h3 className="text-xl sm:text-3xl md:text-5xl font-bold tracking-tight text-foreground">{s.title}</h3>
+                    <p className="mt-2 sm:mt-3 text-xs sm:text-base text-foreground/80 md:text-lg">{s.subtitle}</p>
                     <a href="/exchange">
-                      <Button variant="hero" className="mt-6">{s.cta} →</Button>
+                      <Button variant="hero" className="mt-4 sm:mt-6 text-xs sm:text-base">{s.cta} →</Button>
                     </a>
                   </div>
                 </div>
@@ -44,11 +44,11 @@ export const PromoSlider = () => {
             </div>
           ))}
         </div>
-        <button onClick={() => setI((v) => (v - 1 + slides.length) % slides.length)} aria-label="Previous slide" className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-background/70 p-2 backdrop-blur hover:bg-background">
-          <ChevronLeft className="h-5 w-5" />
+        <button onClick={() => setI((v) => (v - 1 + slides.length) % slides.length)} aria-label="Previous slide" className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 rounded-full bg-background/70 p-1.5 sm:p-2 backdrop-blur hover:bg-background">
+          <ChevronLeft className="h-4 sm:h-5 w-4 sm:w-5" />
         </button>
-        <button onClick={() => setI((v) => (v + 1) % slides.length)} aria-label="Next slide" className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-background/70 p-2 backdrop-blur hover:bg-background">
-          <ChevronRight className="h-5 w-5" />
+        <button onClick={() => setI((v) => (v + 1) % slides.length)} aria-label="Next slide" className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 rounded-full bg-background/70 p-1.5 sm:p-2 backdrop-blur hover:bg-background">
+          <ChevronRight className="h-4 sm:h-5 w-4 sm:w-5" />
         </button>
         <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
           {slides.map((_, idx) => (

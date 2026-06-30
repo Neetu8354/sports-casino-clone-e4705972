@@ -105,11 +105,44 @@ export const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Betfair01",
-  alternateName: "Betfair01 Cricket Exchange",
+  alternateName: [
+    "Betfair01 Cricket Exchange",
+    "Betfair01 Betting Exchange",
+    "Betfair01 India"
+  ],
   url: SITE_URL,
   logo: `${SITE_URL}/og-default.jpg`,
-  sameAs: [],
-  description: "Online cricket betting exchange in India with live cricket odds, IPL betting, T20 odds, and casino games.",
+  image: `${SITE_URL}/og-default.jpg`,
+  description: "Betfair01 is an online cricket betting exchange platform offering live cricket odds, IPL betting, T20 betting markets, online cricket betting, live sports exchange, and online casino games for users in India.",
+  email: "support@betfair01.live",
+  foundingDate: "2025",
+  sameAs: [SITE_URL],
+  keywords: [
+    "online cricket betting",
+    "cricket bet online",
+    "online betting cricket",
+    "online cricket betting sites",
+    "online betting app cricket",
+    "online cricket betting in India",
+    "online cricket betting sites in India",
+    "how to bet in cricket online",
+    "live cricket betting",
+    "IPL betting",
+    "T20 betting",
+    "cricket exchange",
+    "online casino games",
+    "casino online game",
+    "live casino game online"
+  ],
+  areaServed: {
+    "@type": "Country",
+    name: "India"
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    url: SITE_URL
+  }
 };
 
 export const websiteJsonLd = {

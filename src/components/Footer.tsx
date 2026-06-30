@@ -4,15 +4,15 @@ import { POSTS } from "@/data/posts";
 
 const cols: Record<string, { label: string; to?: string; href?: string }[]> = {
   Markets: [
-    { label: "Live Match Odds", to: "/#matches" },
+    { label: "Live Match Odds", to: "/" },
     { label: "Exchange", to: "/exchange" },
-    { label: "Match Pulse", to: "/#matches" },
-    { label: "Fixtures", to: "/#matches" },
+    { label: "Match Pulse", to: "/" },
+    { label: "Fixtures", to: "/" },
   ],
   Stats: [
-    { label: "Top Batters", to: "/#stats" },
-    { label: "Top Bowlers", to: "/#stats" },
-    { label: "Team Form", to: "/#standings" },
+    { label: "Top Batters", to: "/stats" },
+    { label: "Top Bowlers", to: "/stats" },
+    { label: "Team Form", to: "/standings" },
     { label: "Cricket Glossary", to: "/blog/cricket-glossary-101-terms" },
   ],
   Blog: [
@@ -22,16 +22,16 @@ const cols: Record<string, { label: string; to?: string; href?: string }[]> = {
     { label: "In-Play Strategy Guide", to: "/blog/fan-predictions-strategy-guide" },
   ],
   Company: [
-    { label: "Trading Floor", to: "/#matches" },
-    { label: "Contact", to: "/#matches" },
+    { label: "Trading Floor", to: "/" },
+    { label: "Contact", to: "/" },
     { label: "Cricket Blog", to: "/blog" },
   ],
 };
 
 export const Footer = () => (
   <footer className="mt-16 border-t border-border bg-background">
-    <div className="container py-12">
-      <div className="grid gap-8 md:grid-cols-5">
+    <div className="container py-8 sm:py-12">
+      <div className="grid gap-6 sm:gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
         <div>
           <Logo />
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Sub-second cricket odds, deep market analytics and a 200K-strong trading floor. Built by traders who refresh the order book too often.</p>

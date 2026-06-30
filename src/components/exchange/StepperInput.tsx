@@ -21,12 +21,12 @@ export const StepperInput = ({
     onChange(fmt(next));
   };
   return (
-    <div className="flex h-11 items-stretch overflow-hidden rounded-md border border-slate-300 bg-white">
+    <div className="flex h-11 sm:h-12 items-stretch overflow-hidden rounded-md border border-slate-300 bg-white">
       <button
         type="button"
         aria-label="decrease"
         onClick={() => bump(-step)}
-        className="w-9 bg-slate-100 text-lg font-bold text-slate-700 transition-colors active:bg-slate-200"
+        className="w-9 sm:w-10 bg-slate-100 text-base sm:text-lg font-bold text-slate-700 transition-colors active:bg-slate-200"
       >
         −
       </button>
@@ -34,15 +34,15 @@ export const StepperInput = ({
         inputMode="decimal"
         value={value}
         onChange={(e) => onChange(e.target.value.replace(/[^0-9.]/g, ""))}
-        className={`w-full bg-white text-[17px] font-semibold text-slate-900 outline-none ${
-          align === "right" ? "pr-3 text-right" : "text-center"
+        className={`w-full bg-white text-base sm:text-lg font-semibold text-slate-900 outline-none ${
+          align === "right" ? "pr-2 sm:pr-3 text-right" : "text-center"
         }`}
       />
       <button
         type="button"
         aria-label="increase"
         onClick={() => bump(step)}
-        className="w-9 bg-slate-100 text-lg font-bold text-slate-700 transition-colors active:bg-slate-200"
+        className="w-9 sm:w-10 bg-slate-100 text-base sm:text-lg font-bold text-slate-700 transition-colors active:bg-slate-200"
       >
         +
       </button>

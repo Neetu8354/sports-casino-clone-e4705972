@@ -43,10 +43,10 @@ export const POSTS: Post[] = [
       { q: "Is net run rate still a reliable ranking metric in 2026?", a: "Yes. Across IPL history, the team finishing with the higher season-end NRR has lifted the trophy in 9 of the last 12 seasons. It remains the single best leading indicator — and the cleanest signal that outright odds are about to compress." },
       { q: "How often do you update the IPL 2026 rankings?", a: "Every Monday during the season. We refresh NRR, phase economy, form deltas and outright price movement so the tiers reflect the last 14 days of cricket — not preseason hype." },
       { q: "Which IPL teams are rebuilding in 2026?", a: "Punjab Kings and Sunrisers Hyderabad enter 2026 with the youngest squads. Outrights trade beyond 18.0 on the exchange; long-term upside is real but the model projects 9th or 10th unless their captain delivers 600+ runs at strike rate 150." },
-      { q: "Where can I track IPL 2026 live exchange odds?", a: "Use the [Betfair live cricket markets hub](/) for sub-second back and lay updates and the [match pulse tracker](/#matches) for live community conviction alongside the order book." },
+      { q: "Where can I track IPL 2026 live exchange odds?", a: "Use the [Betfair live cricket markets hub](/) for sub-second back and lay updates and the [match pulse tracker](/) for live community conviction alongside the order book." },
     ],
     content: [
-      { type: "callout", text: "**TL;DR** — Mumbai Indians, Gujarat Titans and Royal Challengers Bengaluru lead our IPL 2026 power rankings and trade shortest on the outright exchange. Methodology weighted to NRR, death-overs economy and top-order SR. Updated weekly. Track live tier shifts and outright movement on the [Betfair stats dashboard](/#stats)." },
+      { type: "callout", text: "**TL;DR** — Mumbai Indians, Gujarat Titans and Royal Challengers Bengaluru lead our IPL 2026 power rankings and trade shortest on the outright exchange. Methodology weighted to NRR, death-overs economy and top-order SR. Updated weekly. Track live tier shifts and outright movement on the [Betfair stats dashboard](/stats)." },
       { type: "p", text: "Every IPL season opens with hot takes, but **power rankings only matter if they're built on data and tied to a real market**. We combined 12 seasons of ball-by-ball logs with the 2026 retention card and the live outright winner exchange to publish an objective, repeatable IPL 2026 power ranking. No vibes — just numbers, cross-checked against what the order book actually pays. This article explains the methodology, walks through every tier and ties each verdict back to the metrics that predict both playoff finishes and outright price compression." },
       { type: "h2", text: "How we built the IPL 2026 power rankings", id: "methodology" },
       { type: "p", text: "We weighted four indicators with the strongest historical correlation to IPL playoff finishes and to outright price movement. Each franchise scores 0–100, groups into S, A, B and C tiers, then re-scores every Monday so the table reflects current form — not preseason narrative." },
@@ -99,8 +99,8 @@ export const POSTS: Post[] = [
       { q: "What is WPA in cricket and how do I use it as a trader?", a: "Win Probability Added measures how much each ball moved the win probability. It is cricket's closest equivalent to baseball's WAR and is the cleanest framework for understanding why an exchange price just moved by 0.30." },
     ],
     content: [
-      { type: "callout", text: "**TL;DR** — Ignore batting average in T20. Track strike rate, true average, dot-ball %, phase-wise economy, boundary %, WPA and match-ups. See them all live on the [Betfair stats dashboard](/#stats) — these are the seven inputs that actually move the back and lay prices." },
-      { type: "p", text: "Cricket has more stats than any other sport on earth, and 90% of them are noise on an exchange. This guide cuts through the clutter and shows you the **seven metrics that actually move match odds** when sharp traders price a market. Apply them on our [live stats dashboard](/#stats) alongside the [match pulse tracker](/#matches) and you'll start spotting value the casual punter misses." },
+      { type: "callout", text: "**TL;DR** — Ignore batting average in T20. Track strike rate, true average, dot-ball %, phase-wise economy, boundary %, WPA and match-ups. See them all live on the [Betfair stats dashboard](/stats) — these are the seven inputs that actually move the back and lay prices." },
+      { type: "p", text: "Cricket has more stats than any other sport on earth, and 90% of them are noise on an exchange. This guide cuts through the clutter and shows you the **seven metrics that actually move match odds** when sharp traders price a market. Apply them on our [live stats dashboard](/stats) alongside the [match pulse tracker](/) and you'll start spotting value the casual punter misses." },
       { type: "h2", text: "1. Strike rate beats average in T20", id: "strike-rate" },
       { type: "p", text: "If you remember nothing else, remember this: in T20, **a 35-average batter at SR 160 is worth more to an exchange model than a 50-average batter at SR 120**. Tempo wins games. Averages just describe survival — and survival doesn't move a back price." },
       { type: "p", text: "A simple rule: any opener trading below SR 135 in 2026 is leaking expected runs and propping up the lay side. Any finisher below SR 165 is the wrong finisher — and the chase price knows it." },
@@ -117,7 +117,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "7. Match-up matrices", id: "match-ups" },
       { type: "p", text: "Right-arm pace vs left-handed top order, leg-spin vs middle order, slow-bouncer vs power hitters — **match-ups beat one-size-fits-all averages every time**. Most upsets in T20 are match-up upsets, and the lay side of an overpriced favourite usually starts with a single mismatched bowling change." },
       { type: "h2", text: "Putting it together", id: "synthesis" },
-      { type: "p", text: "Layer these seven metrics on top of each other and you'll build a mental model that beats most pundit takes — and prices most public markets. To see them applied live, open the [Betfair stats hub](/#stats) during a match, or read our [cricket prediction models explainer](/blog/cricket-prediction-models-explained) for the maths under the hood." },
+      { type: "p", text: "Layer these seven metrics on top of each other and you'll build a mental model that beats most pundit takes — and prices most public markets. To see them applied live, open the [Betfair stats hub](/stats) during a match, or read our [cricket prediction models explainer](/blog/cricket-prediction-models-explained) for the maths under the hood." },
       { type: "h2", text: "Common stat-reading mistakes", id: "mistakes" },
       { type: "ul", items: [
         "Confusing economy with control — economy can hide a high boundary %.",
@@ -169,10 +169,10 @@ export const POSTS: Post[] = [
       { type: "ul", items: [
         "Live strike rate and partnership SR on every screen.",
         "Phase-wise economy split (powerplay / middle / death).",
-        "A live win-probability bar — see the [match pulse tracker](/#matches).",
+        "A live win-probability bar — see the [match pulse tracker](/).",
         "Matched volume and price ladder, not just a static back/lay pair.",
         "No autoplay video ads.",
-        "Cross-link to deeper [player stats](/#stats) and [team standings](/#standings).",
+        "Cross-link to deeper [player stats](/stats) and [team standings](/standings).",
       ] },
       { type: "h2", text: "Use it with our companion guides", id: "stack" },
       { type: "p", text: "Pair the live markets hub with our [reading the exchange guide](/blog/how-to-read-cricket-stats-like-an-analyst), the [in-play strategy framework](/blog/fan-predictions-strategy-guide) and the weekly-updated [IPL 2026 power rankings](/blog/ipl-2026-team-power-rankings) and you have everything a serious cricket trader needs in one tab." },
@@ -193,7 +193,7 @@ export const POSTS: Post[] = [
       { q: "Can I trust pre-match cricket prices?", a: "Use pre-match prices as a baseline, not gospel. Toss, dew, venue and last-minute team news shift fair value by 5–15 points in either direction. The pre-match market is almost always slow to react to confirmed XIs." },
       { q: "What data goes into a cricket pricing model?", a: "Recent player form (last 10 innings weighted), pitch and venue behaviour, batter-vs-bowler match-up matrices, toss outcome, weather, dew probability and current match score." },
       { q: "Do exchange models use machine learning?", a: "Most modern models combine traditional statistics with gradient-boosted trees or shallow neural nets. The biggest accuracy gains come from cleaner data and richer features — not deeper models." },
-      { q: "Where can I see live model-driven cricket prices?", a: "The [match pulse section](/#matches) on the Betfair home page surfaces live community sentiment alongside model-driven win probability and the back/lay order book for every featured match." },
+      { q: "Where can I see live model-driven cricket prices?", a: "The [match pulse section](/) on the Betfair home page surfaces live community sentiment alongside model-driven win probability and the back/lay order book for every featured match." },
     ],
     content: [
       { type: "callout", text: "**TL;DR** — Cricket pricing models are structured pattern recognition, not crystal balls. They blend form, venue, match-ups and live ball data into a fair price the exchange settles around. Accuracy: 62–68% pre-match, 78%+ after the powerplay." },
@@ -236,11 +236,11 @@ export const POSTS: Post[] = [
     faq: [
       { q: "Which batter is most likely to move match odds in 2026?", a: "Our composite (last-12-month SR, true average vs top bowling, boundary %) puts a generational opener at #1. He alone compresses an IPL chasing price by an average of 0.18 in his first 10 deliveries. Full ranked list and methodology in the article." },
       { q: "What criteria did you use to rank batters?", a: "Last-12-month strike rate, true average against top-quartile bowling, boundary percentage, intent score and projected workload across IPL 2026, internationals and franchise leagues." },
-      { q: "Where can I see live batter form?", a: "The [Betfair player stats hub](/#stats) tracks strike rate, average and runs across the season and links to deeper match-by-match analytics." },
+      { q: "Where can I see live batter form?", a: "The [Betfair player stats hub](/stats) tracks strike rate, average and runs across the season and links to deeper match-by-match analytics." },
       { q: "Which young batters are breakout candidates for 2026?", a: "Three U-23 batters cracked our top 10 based on first-class strike rate above 145 and a true average above 38 in their first IPL season — the historical signature of a second-season market mover." },
     ],
     content: [
-      { type: "callout", text: "**TL;DR** — Form is temporary, class is permanent — but underlying numbers tell you which is which, and which batters move a chasing price the moment they walk in. These ten carry the strongest 2026 trajectory. Track them live on the [stats dashboard](/#stats)." },
+      { type: "callout", text: "**TL;DR** — Form is temporary, class is permanent — but underlying numbers tell you which is which, and which batters move a chasing price the moment they walk in. These ten carry the strongest 2026 trajectory. Track them live on the [stats dashboard](/stats)." },
       { type: "p", text: "Every year fan accounts publish 'watchlists' and every year half of them age badly. We built ours by stacking **four objective filters** so the list is repeatable and reads like a market-mover index, not a fan vote. Apply the same filters next season and the names update themselves." },
       { type: "h2", text: "The selection criteria", id: "criteria" },
       { type: "ul", items: [
@@ -251,7 +251,7 @@ export const POSTS: Post[] = [
       ] },
       { type: "p", text: "We back-tested this filter against the 2024 and 2025 seasons. It surfaced 8 of the top 10 leading run-scorers in both years — a solid signal that the methodology travels across seasons." },
       { type: "h2", text: "The headline picks", id: "picks" },
-      { type: "p", text: "The full ranked list is on the [Betfair stats hub](/#stats) and updates weekly. The top three are all openers — unsurprising because powerplay striking continues to drive in-play price compression more than any other phase." },
+      { type: "p", text: "The full ranked list is on the [Betfair stats hub](/stats) and updates weekly. The top three are all openers — unsurprising because powerplay striking continues to drive in-play price compression more than any other phase." },
       { type: "h2", text: "Three breakout candidates", id: "breakouts" },
       { type: "p", text: "Three U-23 batters cracked the list. All three score above 60% of their runs in boundaries and have a true average above 38 in their first IPL season — historically the most reliable predictor of a second-season surge and of an outright 'top run-scorer' price that drops from 25.0 to under 12.0." },
       { type: "h2", text: "How to use this watchlist on the exchange", id: "usage" },
@@ -271,13 +271,13 @@ export const POSTS: Post[] = [
     tags: ["Bowlers", "Watchlist", "2026"],
     keywords: "best cricket bowlers 2026, top wicket takers exchange odds, IPL bowlers 2026, death overs specialists, top T20 bowlers, cricket trading bowlers",
     faq: [
-      { q: "Which bowler will move IPL 2026 odds the most?", a: "Our composite (dot-ball %, death-overs economy, wicket-taking ability) favours two left-arm pacers and a wrist-spinner. Their first over alone shortens a defending side's match-odds back price by 0.20 on average. Form updates weekly on the [stats dashboard](/#stats)." },
+      { q: "Which bowler will move IPL 2026 odds the most?", a: "Our composite (dot-ball %, death-overs economy, wicket-taking ability) favours two left-arm pacers and a wrist-spinner. Their first over alone shortens a defending side's match-odds back price by 0.20 on average. Form updates weekly on the [stats dashboard](/stats)." },
       { q: "Are spinners or pacers more valuable on the exchange?", a: "Pacers dominate the wicket charts, but quality leg-spinners deliver the best wickets-per-economy ratio — and the cleanest in-play 'method of dismissal' edge. Most T20 tournaments are won by sides with at least one elite wrist-spinner." },
       { q: "What is a 'death-overs specialist'?", a: "A bowler with an economy below 9.5 in overs 16–20 across at least 200 deliveries. These bowlers are the rarest and most expensive commodity in the modern T20 market — and the single biggest reason a chasing price stays drifted." },
-      { q: "Where can I track live bowler form?", a: "The [Betfair player stats hub](/#stats) and the [match pulse tracker](/#matches) show live wicket counts, economy and dot-ball % updated ball by ball." },
+      { q: "Where can I track live bowler form?", a: "The [Betfair player stats hub](/stats) and the [match pulse tracker](/) show live wicket counts, economy and dot-ball % updated ball by ball." },
     ],
     content: [
-      { type: "callout", text: "**TL;DR** — We ranked every active T20 bowler with 200+ recent deliveries on dot-ball %, death-overs economy and wicket-taking ability. These are the bowlers whose first over moves an in-play match-odds price by 0.20+. See live updates on the [stats hub](/#stats)." },
+      { type: "callout", text: "**TL;DR** — We ranked every active T20 bowler with 200+ recent deliveries on dot-ball %, death-overs economy and wicket-taking ability. These are the bowlers whose first over moves an in-play match-odds price by 0.20+. See live updates on the [stats hub](/stats)." },
       { type: "p", text: "Bowling watchlists usually skew to whoever took 5-fer last week. Ours uses a 12-month rolling window across three objective metrics so the list survives a hot streak or a cold one — and so it actually maps to the bowlers exchange markets fear." },
       { type: "h2", text: "The shortlist methodology", id: "method" },
       { type: "ul", items: [
@@ -369,7 +369,7 @@ export const POSTS: Post[] = [
         "**Switch hit** — batter changes stance to hit reverse-handed.",
         "**Dilscoop** — full scoop over the keeper, popularised by Dilshan.",
       ] },
-      { type: "p", text: "Bookmark this glossary, share it with the new trader in your group chat, and pair it with our [live cricket markets hub](/) and [stats dashboard](/#stats) for the full Betfair toolkit." },
+      { type: "p", text: "Bookmark this glossary, share it with the new trader in your group chat, and pair it with our [live cricket markets hub](/) and [stats dashboard](/stats) for the full Betfair toolkit." },
     ],
   },
 
@@ -387,7 +387,7 @@ export const POSTS: Post[] = [
       { q: "Is there a 100% accurate cricket prediction system?", a: "No. Top public models hit 62–68% accuracy on T20 winners. Anyone promising more is selling something. The goal on an exchange is consistent edge, not certainty." },
       { q: "Do I need insider info to win at cricket trading?", a: "No. Public data plus a disciplined process beats insider hunches over a 30-match window. Read our [cricket pricing models explainer](/blog/cricket-prediction-models-explained) for the maths." },
       { q: "How much does the toss really matter on the exchange?", a: "Toss alone shifts fair value by 4–7 points. Combined with dew, surface and weather, it can stack another 5–10 points — making it one of the highest-leverage signals available before the in-play market opens." },
-      { q: "Where do I read live cricket exchange markets?", a: "Open the [Betfair live markets hub](/) — match odds, top batsman and in-play markets are all there, ranked weekly on the [trading floor leaderboard](/#standings)." },
+      { q: "Where do I read live cricket exchange markets?", a: "Open the [Betfair live markets hub](/) — match odds, top batsman and in-play markets are all there, ranked weekly on the [trading floor leaderboard](/standings)." },
     ],
     content: [
       { type: "callout", text: "**TL;DR** — Start with the base rate. Adjust with toss and conditions. Read match-ups. Size by confidence. Track your hit rate honestly. That is the entire framework." },
@@ -413,7 +413,7 @@ export const POSTS: Post[] = [
         "Skipping the post-mortem — see Step 5.",
       ] },
       { type: "h2", text: "Put it into practice today", id: "practice" },
-      { type: "p", text: "Pull up the [Betfair home page](/) for live markets, open the [match pulse tracker](/#matches) for current floor conviction, and run the five-step framework on tonight's game. Compare your fair-value output against the live back/lay — the gap is your edge." },
+      { type: "p", text: "Pull up the [Betfair home page](/) for live markets, open the [match pulse tracker](/) for current floor conviction, and run the five-step framework on tonight's game. Compare your fair-value output against the live back/lay — the gap is your edge." },
     ],
   },
 
@@ -451,7 +451,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "Using venue data in your trading", id: "trading" },
       { type: "p", text: "Plug the venue chasing premium into Step 2 of our [in-play strategy guide](/blog/fan-predictions-strategy-guide). Pair it with the [top bowlers watchlist](/blog/top-10-bowlers-2026-watchlist) to spot bowlers whose style suits the venue and our [reading the exchange guide](/blog/how-to-read-cricket-stats-like-an-analyst) for the metric definitions." },
       { type: "h2", text: "Live application", id: "live" },
-      { type: "p", text: "Open the [Betfair live markets hub](/) before tonight's match. Note the venue. Pull the chasing premium from the tier list above. Run the five-step framework. Compare your fair-value output to the [community pulse](/#matches) and the back/lay — that gap is your edge." },
+      { type: "p", text: "Open the [Betfair live markets hub](/) before tonight's match. Note the venue. Pull the chasing premium from the tier list above. Run the five-step framework. Compare your fair-value output to the [community pulse](/) and the back/lay — that gap is your edge." },
     ],
   },
 
@@ -492,7 +492,7 @@ export const POSTS: Post[] = [
         "Cross-links to deeper resources — like our [IPL power rankings](/blog/ipl-2026-team-power-rankings).",
       ] },
       { type: "h2", text: "How the Betfair trading floor is built", id: "betfair" },
-      { type: "p", text: "We designed the [Betfair trading floor](/) around the four pillars. Live match threads sit alongside the [live markets hub](/) and the [match pulse tracker](/#matches). The [trading floor leaderboard](/#standings) gives identity markers. Joining is one tap on WhatsApp. Moderators apply a strict no-rumour, no-tip policy so the [stats hub](/#stats) and [in-play strategy guide](/blog/fan-predictions-strategy-guide) stay readable." },
+      { type: "p", text: "We designed the [Betfair trading floor](/) around the four pillars. Live match threads sit alongside the [live markets hub](/) and the [match pulse tracker](/). The [trading floor leaderboard](/standings) gives identity markers. Joining is one tap on WhatsApp. Moderators apply a strict no-rumour, no-tip policy so the [stats hub](/stats) and [in-play strategy guide](/blog/fan-predictions-strategy-guide) stay readable." },
       { type: "h2", text: "The result", id: "result" },
       { type: "p", text: "A 200,000-strong cricket trading floor that's active off-season, dominated by analytics rather than rumour, and easy to join. Try it before tonight's match and see if the signal-to-noise lives up to the promise." },
     ],

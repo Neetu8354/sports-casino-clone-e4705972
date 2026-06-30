@@ -1,3 +1,4 @@
+import React from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { PromoSlider } from "@/components/PromoSlider";
@@ -35,7 +36,11 @@ const faqData = [
   { q: "Why do users choose Betfair01 for online betting cricket?", a: "Many users prefer Betfair01 for its live cricket betting markets, competitive exchange odds, extensive sports coverage, in-play betting options, online casino games, and user-friendly betting experience." },
 ];
 
-const Index = () => {
+interface IndexProps {
+  scrollTo?: string;
+}
+
+const Index = ({ scrollTo }: IndexProps) => {
   const homeFaq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -45,6 +50,15 @@ const Index = () => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
+
+  React.useEffect(() => {
+    if (scrollTo) {
+      const element = document.getElementById(scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [scrollTo]);
 
   return (
     <div id="top" className="min-h-screen bg-background pb-16 lg:pb-0">
@@ -64,19 +78,19 @@ const Index = () => {
         <div id="stats"><PlayerStats /></div>
         <Features />
         <div id="standings"><Leaderboard /></div>
-        <section aria-labelledby="latest-blog" className="container py-12">
-          <div className="mb-6 flex items-end justify-between">
+        <section aria-labelledby="latest-blog" className="container py-8 sm:py-12">
+          <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
             <div>
               <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald">The Trading Floor</div>
-              <h2 id="latest-blog" className="font-display mt-2 text-4xl uppercase tracking-wide md:text-6xl">Long reads. Sharp prices. Sharper edges.</h2>
+              <h2 id="latest-blog" className="font-display mt-2 text-3xl sm:text-4xl md:text-6xl uppercase tracking-wide">Long reads. Sharp prices. Sharper edges.</h2>
             </div>
-            <Link to="/blog" className="text-sm font-semibold text-emerald hover:underline">View all →</Link>
+            <Link to="/blog" className="text-xs sm:text-sm font-semibold text-emerald hover:underline whitespace-nowrap">View all →</Link>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {POSTS.slice(0, 6).map((p) => (
-              <Link key={p.slug} to={`/blog/${p.slug}`} className="group rounded-2xl border border-border bg-gradient-card p-6 shadow-card-elevated transition-all hover:-translate-y-1 hover:border-emerald/60 hover:shadow-glow">
-                <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald">{p.category}</div>
-                <h3 className="mt-3 text-lg font-semibold leading-snug tracking-tight group-hover:text-emerald">{p.title}</h3>
+              <Link key={p.slug} to={`/blog/${p.slug}`} className="group rounded-xl sm:rounded-2xl border border-border bg-gradient-card p-4 sm:p-6 shadow-card-elevated transition-all hover:-translate-y-1 hover:border-emerald/60 hover:shadow-glow">
+                <div className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald">{p.category}</div>
+                <h3 className="mt-2 sm:mt-3 text-base sm:text-lg font-semibold leading-snug tracking-tight group-hover:text-emerald">{p.title}</h3>
                 <p className="mt-2 text-xs text-muted-foreground line-clamp-2">{p.excerpt}</p>
               </Link>
             ))}
@@ -84,19 +98,19 @@ const Index = () => {
         </section>
 
         {/* FAQ Section */}
-        <section aria-labelledby="faq-heading" className="container py-12">
-          <div className="mb-8 text-center">
+        <section aria-labelledby="faq-heading" className="container py-8 sm:py-12">
+          <div className="mb-6 sm:mb-8 text-center px-4">
             <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald">Got Questions?</div>
-            <h2 id="faq-heading" className="font-display mt-2 text-3xl uppercase tracking-wide md:text-5xl">Frequently Asked Questions (FAQs) – Betfair01</h2>
+            <h2 id="faq-heading" className="font-display mt-2 text-2xl sm:text-3xl md:text-5xl uppercase tracking-wide">Frequently Asked Questions (FAQs) – Betfair01</h2>
           </div>
-          <div className="mx-auto max-w-4xl space-y-3">
+          <div className="mx-auto max-w-4xl space-y-2 sm:space-y-3 px-4 sm:px-0">
             {faqData.map((f, i) => (
-              <details key={i} className="group rounded-xl border border-border bg-gradient-card p-4 shadow-card transition-all hover:border-emerald/40">
-                <summary className="cursor-pointer list-none text-base font-semibold text-foreground flex items-center justify-between">
+              <details key={i} className="group rounded-lg sm:rounded-xl border border-border bg-gradient-card p-3 sm:p-4 shadow-card transition-all hover:border-emerald/40">
+                <summary className="cursor-pointer list-none text-sm sm:text-base font-semibold text-foreground flex items-center justify-between">
                   <span>{i + 1}. {f.q}</span>
-                  <span className="ml-2 text-emerald transition-transform group-open:rotate-180">▼</span>
+                  <span className="ml-2 text-emerald transition-transform group-open:rotate-180 flex-shrink-0">▼</span>
                 </summary>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/85">{f.a}</p>
+                <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed text-foreground/85">{f.a}</p>
               </details>
             ))}
           </div>

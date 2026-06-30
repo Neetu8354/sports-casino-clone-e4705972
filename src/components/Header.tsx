@@ -4,9 +4,10 @@ import { Logo } from "./Logo";
 import { Link } from "react-router-dom";
 
 const nav: { label: string; href: string; internal?: boolean }[] = [
-  { label: "Live Markets", href: "/exchange", internal: true },
-  { label: "Stats", href: "/#stats", internal: true },
-  { label: "Traders", href: "/#standings", internal: true },
+  { label: "Live Markets", href: "/", internal: true },
+  { label: "Exchange", href: "/exchange", internal: true },
+  { label: "Stats", href: "/stats", internal: true },
+  { label: "Traders", href: "/standings", internal: true },
   { label: "Blog", href: "/blog", internal: true },
 ];
 

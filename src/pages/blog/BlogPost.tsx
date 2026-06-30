@@ -173,8 +173,8 @@ const BlogPost = () => {
           <h2 className="mb-3 text-lg font-bold">Keep exploring</h2>
           <ul className="grid gap-2 text-sm sm:grid-cols-2">
             <li><Link to="/" className="text-foreground hover:text-gold">→ Live cricket scores hub</Link></li>
-            <li><Link to="/#stats" className="text-foreground hover:text-gold">→ Top batters & bowlers stats</Link></li>
-            <li><Link to="/#standings" className="text-foreground hover:text-gold">→ Team standings & form</Link></li>
+            <li><Link to="/stats" className="text-foreground hover:text-gold">→ Top batters & bowlers stats</Link></li>
+            <li><Link to="/standings" className="text-foreground hover:text-gold">→ Team standings & form</Link></li>
             <li><Link to="/blog" className="text-foreground hover:text-gold">→ All cricket blog posts</Link></li>
           </ul>
         </section>
@@ -213,7 +213,7 @@ const BlogPost = () => {
         <div className="mt-12 rounded-xl border border-gold/40 bg-gradient-card p-6 text-center">
           <h3 className="text-lg font-extrabold">Join the Betfair01 cricket community</h3>
           <p className="mt-2 text-sm text-muted-foreground">Live match chats, fan predictions and weekly stats drops.</p>
-          <Link to="/#matches" className="mt-4 inline-block rounded-md bg-gold px-5 py-2 text-sm font-bold text-gold-foreground hover:opacity-90">
+          <Link to="/" className="mt-4 inline-block rounded-md bg-gold px-5 py-2 text-sm font-bold text-gold-foreground hover:opacity-90">
             View Live Markets
           </Link>
         </div>

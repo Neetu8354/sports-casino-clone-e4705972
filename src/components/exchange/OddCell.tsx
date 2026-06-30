@@ -24,12 +24,12 @@ export const OddCell = ({ price, size, tone, active, onClick, ariaLabel }: OddCe
     onClick={onClick}
     aria-label={ariaLabel ?? `${price} at size ${size}`}
     className={cn(
-      "flex h-[52px] w-[64px] flex-col items-center justify-center rounded-[2px] text-slate-900 transition-all duration-150 active:scale-[0.97]",
+      "flex h-[52px] sm:h-[56px] md:h-[60px] w-[64px] sm:w-[70px] md:w-[76px] flex-col items-center justify-center rounded-[2px] text-slate-900 transition-all duration-150 active:scale-[0.97]",
       toneMap[tone],
       active && "ring-2 ring-amber-500 ring-offset-1 ring-offset-white",
     )}
   >
-    <span className="text-[18px] font-bold leading-none">{price}</span>
-    <span className="mt-1 text-[11px] font-medium text-slate-700">{size}</span>
+    <span className="text-base sm:text-lg md:text-xl font-bold leading-none">{price}</span>
+    <span className="mt-1 text-[10px] sm:text-[11px] md:text-xs font-medium text-slate-700">{size}</span>
   </button>
 );

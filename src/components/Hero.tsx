@@ -14,11 +14,11 @@ export const Hero = () => (
         <span className="h-1.5 w-1.5 rounded-full bg-emerald animate-pulse" />
         <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-foreground/80">Live · In-Play · Sub-second Odds</span>
       </div>
-      <h1 className="font-display mt-6 max-w-5xl text-6xl uppercase leading-[0.92] tracking-[0.01em] text-foreground md:text-[8rem]">
+      <h1 className="font-display mt-6 max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-[8rem] uppercase leading-[0.92] tracking-[0.01em] text-foreground">
         Online Cricket Betting Exchange –<br />Live Cricket Odds &<br />
         <span className="bg-gradient-gold bg-clip-text text-transparent">Ball-by-Ball</span> Markets
       </h1>
-      <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/70 md:text-lg">
+      <p className="mt-6 max-w-xl text-sm sm:text-base leading-relaxed text-foreground/70 md:text-lg">
         Experience the excitement of online cricket betting with real-time odds, live match updates, and ball-by-ball trading opportunities. Access competitive cricket exchange markets for IPL, T20, ODI, and international matches with fast settlements and seamless in-play betting.
       </p>
       <div className="mt-8 flex flex-wrap gap-3">

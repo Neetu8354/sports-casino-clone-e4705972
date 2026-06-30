@@ -79,16 +79,16 @@ const Exchange = () => {
   const renderRow = (s: Selection) => (
     <div
       key={s.team}
-      className="flex items-center justify-between border-b border-[#E5E5E5] px-3 py-2.5 hover:bg-slate-50"
+      className="flex flex-col gap-2 border-b border-[#E5E5E5] px-3 py-2.5 hover:bg-slate-50 sm:flex-row sm:items-center sm:justify-between lg:px-4"
     >
       <div className="flex items-center gap-2">
-        <LineChart className="h-5 w-5 text-slate-500" />
+        <LineChart className="h-4 sm:h-5 w-4 sm:w-5 text-slate-500 flex-shrink-0" />
         <div className="leading-tight">
-          <div className="text-[15px] font-bold text-slate-900">{s.team}</div>
-          <div className="text-[12px] font-semibold text-[#2E9B47]">{s.pl}</div>
+          <div className="text-sm sm:text-[15px] font-bold text-slate-900">{s.team}</div>
+          <div className="text-[11px] sm:text-[12px] font-semibold text-[#2E9B47]">{s.pl}</div>
         </div>
       </div>
-      <div className="flex gap-1">
+      <div className="flex gap-1 flex-shrink-0">
         <OddCell
           tone={(s.weak ? "back-weak" : "back-strong") as OddTone}
           price={String(s.back)}
@@ -115,81 +115,154 @@ const Exchange = () => {
         canonical="/exchange"
         jsonLd={seoJsonLd}
       />
-      <div className="mx-auto flex min-h-screen max-w-[420px] flex-col bg-white shadow-2xl">
+      <div className="mx-auto flex min-h-screen w-full flex-col bg-white shadow-lg sm:shadow-xl lg:shadow-2xl lg:max-w-7xl lg:flex-row">
         {/* 1. BRAND HEADER */}
-        <header className="flex items-center justify-between bg-[#FFB327] px-2 py-2">
-          <div className="flex items-center gap-1">
-            <button aria-label="back" className="rounded p-1 active:bg-black/10">
-              <ChevronLeft className="h-6 w-6 text-slate-900" />
+        <header className="flex w-full flex-col items-center justify-between gap-2 bg-[#FFB327] px-2 py-2 sm:px-3 sm:py-2.5 md:px-4 md:py-3 lg:sticky lg:top-0 lg:z-50 lg:flex-row lg:gap-4 lg:px-5 lg:py-3">
+          <div className="flex items-center gap-1 sm:gap-1.5">
+            <button aria-label="back" className="rounded p-1 sm:p-1.5 active:bg-black/10 transition-colors">
+              <ChevronLeft className="h-5 sm:h-6 md:h-6 w-5 sm:w-6 md:w-6 text-slate-900" />
             </button>
             <div className="flex flex-col leading-none">
-              <span className="text-[20px] font-extrabold tracking-tight text-slate-900">betfair</span>
-              <span className="text-[8px] font-bold tracking-[0.2em] text-slate-900/80">EXCHANGE</span>
+              <span className="text-lg sm:text-xl md:text-2xl font-extrabold tracking-tight text-slate-900">betfair</span>
+              <span className="text-[7px] sm:text-[8px] md:text-[9px] font-bold tracking-[0.2em] text-slate-900/80">EXCHANGE</span>
             </div>
           </div>
-          <div className="flex items-stretch gap-1">
+          <div className="flex flex-wrap items-stretch justify-center gap-1 sm:gap-1.5 md:gap-2">
             <Pill ariaLabel="Search">
-              <Search className="h-4 w-4" />
-              <span className="text-[10px] font-semibold">Search</span>
+              <Search className="h-3 sm:h-4 md:h-4 w-3 sm:w-4 md:w-4" />
+              <span className="text-[9px] sm:text-[10px] md:text-[11px] font-semibold">Search</span>
             </Pill>
             <Pill ariaLabel="Balance">
-              <span className="text-[12px] font-bold leading-none">£0.00</span>
-              <span className="text-[10px] font-semibold leading-none">🪙 £50.00</span>
+              <span className="text-[11px] sm:text-[12px] md:text-[13px] font-bold leading-none">£0.00</span>
+              <span className="text-[9px] sm:text-[10px] md:text-[11px] font-semibold leading-none">🪙 £50.00</span>
             </Pill>
             <Pill ariaLabel="My Bets">
-              <ClipboardList className="h-4 w-4" />
-              <span className="text-[10px] font-semibold">My Bets</span>
+              <ClipboardList className="h-3 sm:h-4 md:h-4 w-3 sm:w-4 md:w-4" />
+              <span className="text-[9px] sm:text-[10px] md:text-[11px] font-semibold">My Bets</span>
             </Pill>
           </div>
         </header>
 
-        {/* 2. MATCH STRIP */}
-        <div
-          className="flex items-center justify-between px-3 py-2.5 text-white"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(135deg,#2B2B2B 0 6px,#1F1F1F 6px 12px)",
-          }}
-        >
-          <div className="flex items-center gap-2">
-            <div className="flex flex-col items-center text-amber-400">
-              <Play className="h-4 w-4 animate-pulse fill-amber-400" />
-              <span className="text-[8px] font-bold">LIVE</span>
-              <ChevronDown className="-mt-0.5 h-3 w-3" />
+        {/* MAIN CONTENT WRAPPER */}
+        <div className="flex flex-1 flex-col lg:flex-row lg:gap-4 lg:p-4 xl:gap-5 xl:p-5">
+          {/* LEFT SIDE - MARKETS */}
+          <div className="flex-1 lg:min-w-0">
+            {/* 2. MATCH STRIP */}
+            <div
+              className="flex flex-col gap-2 px-3 py-2.5 text-white sm:flex-row sm:items-center sm:justify-between sm:px-3.5 sm:py-3 md:px-4 md:py-3 lg:rounded-lg lg:px-5 lg:py-4"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(135deg,#2B2B2B 0 6px,#1F1F1F 6px 12px)",
+              }}
+            >
+              <div className="flex items-center gap-2 sm:gap-2.5">
+                <div className="flex flex-col items-center text-amber-400">
+                  <Play className="h-3 sm:h-4 md:h-4 w-3 sm:w-4 md:w-4 animate-pulse fill-amber-400" />
+                  <span className="text-[7px] sm:text-[8px] md:text-[8px] font-bold">LIVE</span>
+                  <ChevronDown className="-mt-0.5 h-2.5 sm:h-3 md:h-3 w-2.5 sm:w-3 md:w-3" />
+                </div>
+                <div className="leading-tight">
+                  <div className="text-sm sm:text-base md:text-lg font-extrabold">Denmark</div>
+                  <div className="text-sm sm:text-base md:text-lg font-extrabold">Rep of Ireland</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-[12px] sm:text-[13px] md:text-sm text-slate-200">
+                <span>Today 19:45</span>
+                <RotateCw className="h-3 sm:h-4 md:h-4 w-3 sm:w-4 md:w-4" />
+              </div>
             </div>
-            <div className="leading-tight">
-              <div className="text-[17px] font-extrabold">Denmark</div>
-              <div className="text-[17px] font-extrabold">Rep of Ireland</div>
+
+            {/* 3. MARKET HEADER */}
+            <div className="flex items-center justify-between border-b border-[#E5E5E5] px-3 py-2 sm:px-3.5 sm:py-2.5 md:px-4 md:py-3 lg:rounded-t-lg lg:bg-slate-50 lg:px-5">
+              <span className="text-[11px] sm:text-[12px] md:text-sm text-slate-700">Matched: £61,088</span>
+              <div className="flex w-[136px] sm:w-[150px] md:w-[160px] justify-around text-[12px] sm:text-[13px] md:text-sm font-semibold text-slate-700">
+                <span>Back</span>
+                <span>Lay</span>
+              </div>
+            </div>
+
+            {/* 4. SELECTION ROWS */}
+            <div className="overflow-x-auto lg:rounded-b-lg">
+              {matchOdds.map(renderRow)}
             </div>
           </div>
-          <div className="flex items-center gap-2 text-[13px] text-slate-200">
-            <span>Today 19:45</span>
-            <RotateCw className="h-4 w-4" />
-          </div>
+
+          {/* RIGHT SIDE - BET SLIP (Desktop) */}
+          {selected && (
+            <div className="hidden lg:block lg:w-80 xl:w-96">
+              <div className="sticky top-20 rounded-lg bg-[#D9ECF7] p-4 sm:p-5 shadow-lg">
+                <div className="text-sm md:text-base text-slate-800">
+                  {selected.side === "back" ? "Back (Bet For)" : "Lay (Bet Against)"}:{" "}
+                  <span className="font-bold">{selected.team} - Match Odds</span>
+                </div>
+
+                <label className="mt-3 flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-sm text-slate-800">
+                    <span className="flex h-5 w-5 items-center justify-center rounded bg-sky-500 text-white">
+                      <Gift className="h-3 w-3" />
+                    </span>
+                    Use Eligible £50.00 Bonus
+                  </span>
+                  <button
+                    type="button"
+                    aria-label="toggle bonus"
+                    onClick={() => setBonusOn((v) => !v)}
+                    className={`relative h-6 w-11 rounded-full transition-colors duration-200 ${
+                      bonusOn ? "bg-[#3DC76B]" : "bg-slate-300"
+                    }`}
+                  >
+                    <span
+                      className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow-md transition-transform duration-200 ${
+                        bonusOn ? "translate-x-[22px]" : "translate-x-0.5"
+                      }`}
+                    />
+                  </button>
+                </label>
+
+                <div className="mt-3 grid grid-cols-2 gap-2">
+                  <StepperInput
+                    value={selected.price.toFixed(2)}
+                    onChange={(v) => setSelected({ ...selected, price: Number(v) || 1.01 })}
+                    step={0.01}
+                    decimals={2}
+                    min={1.01}
+                  />
+                  <StepperInput value={stake} onChange={setStake} step={1} align="right" />
+                </div>
+
+                <div className="mt-2 grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setStake("0")}
+                    className="h-12 rounded-md bg-slate-200 text-sm font-bold text-slate-700 transition-colors active:bg-slate-300"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    onClick={placeBet}
+                    disabled={stakeNum <= 0}
+                    className="h-12 rounded-md bg-[#FFB327] text-center font-bold leading-tight text-slate-900 shadow-sm transition-all active:scale-[0.97] active:bg-amber-500 disabled:opacity-60"
+                  >
+                    <div className="text-sm font-extrabold">Place bet</div>
+                    <div className="text-xs font-semibold">Profit £{profit.toFixed(2)}</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* 3. MARKET HEADER */}
-        <div className="flex items-center justify-between border-b border-[#E5E5E5] px-3 py-2">
-          <span className="text-[12px] text-slate-700">Matched: £61,088</span>
-          <div className="flex w-[136px] justify-around text-[13px] font-semibold text-slate-700">
-            <span>Back</span>
-            <span>Lay</span>
-          </div>
-        </div>
-
-        {/* 4. SELECTION ROWS */}
-        {matchOdds.map(renderRow)}
-
-        {/* 5. BET SLIP */}
+        {/* 5. BET SLIP - MOBILE ONLY */}
         {selected && (
-          <div className="bg-[#D9ECF7] px-3 py-3">
-            <div className="text-[13px] text-slate-800">
+          <div className="lg:hidden bg-[#D9ECF7] px-3 py-3 sm:px-4 sm:py-4 md:px-5 md:py-5">
+            <div className="text-[13px] sm:text-sm md:text-base text-slate-800">
               {selected.side === "back" ? "Back (Bet For)" : "Lay (Bet Against)"}:{" "}
               <span className="font-bold">{selected.team} - Match Odds</span>
             </div>
 
             <label className="mt-3 flex items-center justify-between">
-              <span className="flex items-center gap-2 text-[13px] text-slate-800">
+              <span className="flex items-center gap-2 text-[13px] sm:text-sm md:text-base text-slate-800">
                 <span className="flex h-5 w-5 items-center justify-center rounded bg-sky-500 text-white">
                   <Gift className="h-3 w-3" />
                 </span>
@@ -243,45 +316,55 @@ const Exchange = () => {
           </div>
         )}
 
-        {/* 6. QUICK STAKE BAR */}
-        <div className="grid grid-cols-4 gap-px bg-slate-300">
+        {/* 6. QUICK STAKE BAR - MOBILE ONLY */}
+        <div className="lg:hidden grid grid-cols-4 gap-px bg-slate-300">
           {[10, 20, 50, 100].map((n) => (
             <button
               key={n}
               type="button"
               onClick={() => addChip(n)}
-              className="h-11 bg-[#E5E5E5] text-[14px] font-semibold text-slate-700 transition-colors active:bg-slate-200"
+              className="h-11 sm:h-12 md:h-13 bg-[#E5E5E5] text-[14px] sm:text-[15px] md:text-base font-semibold text-slate-700 transition-colors active:bg-slate-200"
             >
               +{n}
             </button>
           ))}
         </div>
 
-        {/* 7. KEYPAD */}
-        <Keypad onAppend={appendStake} onBackspace={backspace} />
+        {/* 7. KEYPAD - MOBILE ONLY */}
+        <div className="lg:hidden">
+          <Keypad onAppend={appendStake} onBackspace={backspace} />
+        </div>
 
         {/* 8. THE DRAW */}
-        {renderRow(drawRow)}
+        <div className="flex flex-col lg:flex-row lg:gap-4 lg:p-4">
+          <div className="flex-1 lg:min-w-0">
+            <div className="overflow-x-auto lg:rounded-lg">
+              {renderRow(drawRow)}
+            </div>
+          </div>
+        </div>
 
         {/* 9. NEXT MARKET HEADER */}
-        <div className="flex items-center justify-between bg-slate-900 px-3 py-2.5 text-white">
+        <div className="flex items-center justify-between bg-slate-900 px-3 py-2.5 text-white sm:px-3.5 sm:py-3 md:px-4 md:py-3 lg:mx-4 lg:rounded-t-lg lg:px-5 lg:py-4">
           <div className="flex items-center gap-2">
-            <Star className="h-4 w-4 fill-white" />
-            <span className="text-[14px] font-bold">Over/Under 1.5 Goals</span>
+            <Star className="h-3 sm:h-4 w-3 sm:w-4 fill-white" />
+            <span className="text-[13px] sm:text-[14px] font-bold">Over/Under 1.5 Goals</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="h-3 w-3 rounded-full bg-amber-400" />
             <span className="h-3 w-3 rounded-full border border-white/60" />
           </div>
         </div>
-        <div className="border-b border-[#E5E5E5] px-3 py-2 text-[12px] text-slate-600">
+        <div className="border-b border-[#E5E5E5] px-3 py-2 sm:px-3.5 sm:py-2.5 md:px-4 md:py-3 text-[11px] sm:text-[12px] md:text-sm text-slate-600 lg:mx-4 lg:px-5 lg:py-3">
           Matched: £8,732
         </div>
 
-        <main className="flex-1" />
+        <main className="flex-1 lg:hidden" />
 
-        {/* 10. BOTTOM TAB BAR */}
-        <BottomTabBar />
+        {/* 10. BOTTOM TAB BAR - MOBILE ONLY */}
+        <div className="lg:hidden">
+          <BottomTabBar />
+        </div>
       </div>
     </div>
   );
